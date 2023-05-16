@@ -9,7 +9,7 @@ class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Timber.plant(Timber,Timber.DebugTree())
+        //Timber.plant(Timber,Timber.DebugTree())
 //        if (BuildConfig.DEBUG) {
 //            Timber.plant(Timber,Timber.DebugTree())
 //        }

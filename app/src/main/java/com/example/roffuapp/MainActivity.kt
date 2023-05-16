@@ -19,6 +19,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.roffuapp.provider.LocalNavHost
+import com.example.roffuapp.screens.holder.HolderScreen
 import com.example.roffuapp.ui.theme.RoffuAppTheme
 import com.example.roffuapp.utils.LocalScreenSize
 import com.example.roffuapp.utils.getScreenSize
@@ -51,6 +52,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         HolderScreen(
                             onStatusBarColorChange = {
+                                /** Updating the color of the status bar */
                                 /** Updating the color of the status bar */
                                 statusBarColor = it.toArgb()
                             }
