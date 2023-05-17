@@ -39,7 +39,6 @@ class MainActivity : ComponentActivity() {
             /** Getting screen size */
             val size = LocalContext.current.getScreenSize()
 
-
             RoffuAppTheme {
                 CompositionLocalProvider(
                     LocalScreenSize provides size,

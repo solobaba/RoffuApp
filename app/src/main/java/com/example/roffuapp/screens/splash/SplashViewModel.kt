@@ -36,7 +36,6 @@ class SplashViewModel @Inject constructor(
         it[LOGGED_USER_ID]
     }
 
-
     fun checkLoggedUser(userId: Int, onCheckFinish: () -> Unit) {
         viewModelScope.launch {
             userRepository.getLoggedUser(userId = userId)?.let {
