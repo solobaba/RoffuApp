@@ -16,7 +16,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class HolderViewModel @Inject constructor(
-    private val productsRepository: ProductsRepository,
+    private val productsRepository: ProductsRepository
 ) : ViewModel() {
 
     val cartItems: MutableList<CartItem> = mutableStateListOf()

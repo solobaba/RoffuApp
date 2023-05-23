@@ -41,8 +41,10 @@ import kotlinx.coroutines.launch
 @Composable
 fun HolderScreen (
     onStatusBarColorChange: (color: Color) -> Unit,
-    holderViewModel: HolderViewModel = hiltViewModel(),
+    holderViewModel: HolderViewModel = hiltViewModel()
 ) {
+    //val holderViewModel: HolderViewModel by viewModel()
+
     val destinations = remember {
         listOf(Screen.Home, Screen.Notifications, Screen.Bookmark, Screen.Profile)
     }
@@ -104,7 +106,6 @@ fun HolderScreen (
 
     Box {
         /** Cart offset on the screen */
-        /** Cart offset on the screen */
         val (cartOffset, setCartOffset) = remember {
             mutableStateOf(IntOffset(0, 0))
         }
@@ -131,7 +132,6 @@ fun HolderScreen (
                         },
                         onActiveRouteChange = {
                             if (it != currentRouteAsState) {
-                                /** We should navigate to that new route */
                                 /** We should navigate to that new route */
                                 controller.navigate(it) {
                                     popUpTo(Screen.Home.route) {
@@ -195,9 +195,7 @@ fun HolderScreen (
             onToastRequested = { message, color ->
                 scope.launch {
                     /** dismiss the previous one if its exist */
-                    /** dismiss the previous one if its exist */
                     scaffoldState.snackbarHostState.currentSnackbarData?.dismiss()
-                    /** Update the snack bar color */
                     /** Update the snack bar color */
                     setSnackBarColor(color)
                     scaffoldState.snackbarHostState
@@ -208,8 +206,6 @@ fun HolderScreen (
                 }
             }
         )
-
-        /** The snack bar UI */
 
         /** The snack bar UI */
         CustomSnackBar(
@@ -403,9 +399,6 @@ fun ScaffoldSection(
 //                    )
 //                }
             }
-            /** Now we lay down our bottom navigation component */
-            /** Now we lay down our bottom navigation component */
-            /** Now we lay down our bottom navigation component */
             /** Now we lay down our bottom navigation component */
             bottomNavigationContent()
         }

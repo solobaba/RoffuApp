@@ -133,6 +133,8 @@ dependencies {
     def compose_livedata = "1.2.1"
     implementation "androidx.compose.runtime:runtime-livedata:$compose_livedata"
 
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+
     // Lotti file
     def lottie_files = "5.2.0"
     implementation "com.airbnb.android:lottie-compose:$lottie_files"

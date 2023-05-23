@@ -52,7 +52,6 @@ class MainActivity : ComponentActivity() {
                         HolderScreen(
                             onStatusBarColorChange = {
                                 /** Updating the color of the status bar */
-                                /** Updating the color of the status bar */
                                 statusBarColor = it.toArgb()
                             }
                         )
@@ -76,6 +75,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     RoffuAppTheme {
-        Greeting("Android")
+        //Greeting("Android")
     }
 }
